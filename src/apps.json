@@ -1,0 +1,60 @@
+{
+  "apps":[
+    {
+      "name":"Letters",
+      "href":"https://drive.google.com/drive/folders/0B53nhU5Pt0PfMWI1dFdpX0RVQmM?usp=sharing"
+    },
+    {
+      "name":"Games",
+      "href":"modules/Games.js"
+    },
+    {
+      "name":"Bucket List",
+      "href":"https://docs.google.com/document/d/1myAj1he3qKyLNEDrPyS2v00murScvBoiZirm6AEHicU/edit?usp=sharing"
+    },
+    {
+      "name":"Countdown",
+      "href":"modules/Countdown.js"
+    },
+    {
+      "name":"Music",
+      "href":"https://open.spotify.com/user/1252724575/playlist/1UaPPJmBGUo6nV0TIAhebp"
+    },
+    {
+      "name":"Calendar",
+      "href":"modules/Calendar.js"
+    },
+    {
+      "name":"Notes",
+      "href":"modules/Notes.js"
+    },
+    {
+      "name":"Stories and Ideas",
+      "href":"modules/Stories.js"
+    },
+    {
+      "name":"Photo Gallery",
+      "href":"modules/Photos.js"
+    },
+    {
+      "name":"Distance Tracker",
+      "href":"modules/Distance.js"
+    },
+    {
+      "name":"Accountability Partner",
+      "href":"modules/Accountability.js"
+    },
+    {
+      "name":"Memory Box",
+      "href":"modules/Memories.js"
+    },
+    {
+      "name":"Fitness Tracker",
+      "href":"modules/Fitness.js"
+    },
+    {
+      "name":"Quizzes",
+      "href":"modules/Quizzes.js"
+    }
+  ]
+}
