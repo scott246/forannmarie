@@ -1,0 +1,66 @@
+:root {
+  --spacing: 10px;
+  --small: 100px;
+  --medium: 210px;
+  --large: 320px;
+  --regular: 47.3%;
+  --wide: 100%;
+}
+
+.CountdownTile {
+  height: var(--small);
+  width: var(--regular);
+  padding-left: var(--spacing);
+  padding-right: var(--spacing);
+  padding-top: var(--spacing);
+  margin-left: var(--spacing);
+  margin-right: var(--spacing);
+  margin-top: var(--spacing);
+  background-color: rgba(0,255,0,.5);
+  font-family: 'Arial', sans-serif;
+  float: left;
+}
+
+.LettersTile {
+  height: var(--medium);
+  width: var(--regular);
+  padding-right: var(--spacing);
+  padding-top: var(--spacing);
+  padding-left: var(--spacing);
+  margin-right: var(--spacing);
+  margin-top: var(--spacing);
+  background-color: rgba(0,0,255,.5);
+  font-family: 'Arial', sans-serif;
+  float: right;
+}
+
+.LettersTable {
+  height: 125px;
+  overflow: auto;
+}
+.LettersTable a {
+  color: rgb(255,255,0);
+}
+.LettersTable ul {
+  list-style-type: none;
+}
+
+
+.BucketListTile {
+  height: var(--small);
+  width: var(--regular);
+  padding-right: var(--spacing);
+  padding-top: var(--spacing);
+  padding-left: var(--spacing);
+  margin-right: var(--spacing);
+  margin-top: var(--spacing);
+  background-color: rgba(255,0,0,.5);
+  font-family: 'Arial', sans-serif;
+  float: right;
+}
+
+.TileTitle {
+  font-family: 'Georgia',serif;
+  font-size: large;
+  text-align: left;
+}

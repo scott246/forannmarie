@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
-import MainTile from './MainTile.js';
+
+/* imports for each Component */
+import MainTile from './modules/MainTile.js';
+import Countdown from './modules/Countdown.js';
+import Letters from './modules/Letters.js';
+
 import './App.css';
 import appjson from './apps.json';
 
@@ -38,7 +43,10 @@ class App extends Component {
           </div>
           <Navbar />
         </div>
+        {/*add components to app*/}
         <MainTile />
+        <Countdown />
+        <Letters />
         <p className="App-intro">
           "Made with {'<'}3 by Nathan Scott, 2017."
         </p>

@@ -15,6 +15,12 @@ body {
   font-family: 'Georgia', serif;
 }
 
+.Tile {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+
 .Name {
   width: 50%;
   display: flex;
@@ -84,6 +90,11 @@ body {
   justify-content:center;
 }
 
+.Title h1 {
+  font-style: italic;
+}
+
 .App-intro {
   font-size: large;
+  text-align: center;
 }
