@@ -1,8 +1,8 @@
 :root {
   --spacing: 10px;
   --small: 100px;
-  --medium: 210px;
-  --large: 320px;
+  --medium: 220px;
+  --large: 340px;
   --regular: 47.3%;
   --wide: 100%;
 }
@@ -33,7 +33,6 @@
   font-family: 'Arial', sans-serif;
   float: right;
 }
-
 .LettersTable {
   height: 125px;
   overflow: auto;
@@ -45,18 +44,18 @@
   list-style-type: none;
 }
 
-
-.BucketListTile {
+.BLTile {
   height: var(--small);
   width: var(--regular);
   padding-right: var(--spacing);
   padding-top: var(--spacing);
   padding-left: var(--spacing);
+  margin-left: var(--spacing);
   margin-right: var(--spacing);
   margin-top: var(--spacing);
   background-color: rgba(255,0,0,.5);
   font-family: 'Arial', sans-serif;
-  float: right;
+  float: left;
 }
 
 .TileTitle {

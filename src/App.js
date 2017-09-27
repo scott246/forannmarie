@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import MainTile from './modules/MainTile.js';
 import Countdown from './modules/Countdown.js';
 import Letters from './modules/Letters.js';
+import BucketList from './modules/Bucketlist.js';
 
 import './App.css';
 import appjson from './apps.json';
@@ -47,6 +48,7 @@ class App extends Component {
         <MainTile />
         <Countdown />
         <Letters />
+        <BucketList />
         <p className="App-intro">
           "Made with {'<'}3 by Nathan Scott, 2017."
         </p>
