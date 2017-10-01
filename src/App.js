@@ -5,6 +5,7 @@ import MainTile from './modules/MainTile.js';
 import Countdown from './modules/Countdown.js';
 import Letters from './modules/Letters.js';
 import BucketList from './modules/Bucketlist.js';
+import Photos from './modules/PhotoGallery.js';
 
 import './App.css';
 import appjson from './apps.json';
@@ -49,6 +50,7 @@ class App extends Component {
         <Countdown />
         <Letters />
         <BucketList />
+        <Photos />
         <p className="App-intro">
           "Made with {'<'}3 by Nathan Scott, 2017."
         </p>

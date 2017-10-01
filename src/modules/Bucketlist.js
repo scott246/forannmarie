@@ -2,13 +2,6 @@ import React, { Component } from 'react';
 import './modules.css';
 
 class BucketList extends Component {
-  constructor(props) {
-    super(props);
-    this.state={
-      filterStr: ""
-    }
-  }
-
 	render() {
 		return (
       <div className="BLTile">
