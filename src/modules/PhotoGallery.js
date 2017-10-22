@@ -1,39 +1,40 @@
 import React, { Component } from 'react';
 import './modules.css';
+import ImageGallery from 'react-image-gallery';
 
-class Photos extends Component {
-  constructor(props){
-    super(props)
-    this.images = this.importImages(require.context('../../img', false, /\.(jpg|JPG|PNG)$/))
-    this.slides = this.images.map((image) => <div className="Slide"><img className="Image"src={image} alt="" /></div>)
+// Component for gallery
+export default class Gallery extends Component{
+  constructor(props) {
+    super(props);
+    this.images = this.importImages(require.context('../../img', false, /\.(jpg|JPG|PNG)$/));
   }
 
   importImages = (r) => {
     return r.keys().map(r);
   }
 
-  createDots = () => {
-    var dots = [];
-    for (var i=0; i<this.images.length; i++) {
-        dots.push(<span className="Dot" onClick={this.currentSlide(i)} key={i}></span>);
+  items = []
+
+  renderImages = () => {
+    for (var i = 0; i < this.images.length; i++) {
+      this.items.push({original: this.images[i]})
     }
-    return dots;
   }
 
-	render() {
-    console.log(this.images.length)
-		return (
+  render() {
+    console.log(this.items)
+    this.renderImages();
+    return (
       <div className="PhotosTile">
         <div className="TileTitle">Photo Gallery</div>
         <hr />
-        <div className="Slideshow">
-          {this.slides}
+        <div>
+          <ImageGallery
+            items={this.items}
+            showIndex={true}
+            showBullets={true} />
         </div>
-
       </div>
-		)
-	}
+    )
+  }
 }
-
-
-export default Photos;
