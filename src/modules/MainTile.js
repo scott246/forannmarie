@@ -2,7 +2,12 @@ import React, { Component } from 'react';
 import '../App.css';
 import message from './messages.json';
 
+
 class MainTile extends Component {
+	getMessages = () => {
+
+	}
+
 	render() {
 		return (
 			<div className="Tile">
@@ -10,6 +15,7 @@ class MainTile extends Component {
 					<div className="Title">
 						<h1>For Ann Marie Schoenbaum</h1>
 						<hr width="50%"/>
+						{this.getMessages()}
 						<p>{message.messages[Math.floor(Math.random() * message.messages.length)]}</p>
 					</div>
 				</div>

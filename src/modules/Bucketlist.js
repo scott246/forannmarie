@@ -9,7 +9,7 @@ class BucketList extends Component {
         <hr />
         <div>
           <a href="https://docs.google.com/document/d/1myAj1he3qKyLNEDrPyS2v00murScvBoiZirm6AEHicU/edit?usp=sharing">
-          Ann Marie and Nathans Bucket List
+          Ann Marie and Nathan{'\''}s Bucket List
           </a>
         </div>
       </div>

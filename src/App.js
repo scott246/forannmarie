@@ -6,6 +6,8 @@ import Countdown from './modules/Countdown.js';
 import Letters from './modules/Letters.js';
 import BucketList from './modules/Bucketlist.js';
 import Photos from './modules/PhotoGallery.js';
+import Distance from './modules/Distance.js';
+import Calendar from './modules/Calendar.js';
 
 import './App.css';
 import appjson from './apps.json';
@@ -51,6 +53,8 @@ class App extends Component {
         <Letters />
         <BucketList />
         <Photos />
+        <Distance />
+        <Calendar />
         <p className="App-intro">
           "Made with {'<'}3 by Nathan Scott, 2017."
         </p>

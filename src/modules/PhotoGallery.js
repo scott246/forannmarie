@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './modules.css';
 import ImageGallery from 'react-image-gallery';
+import "react-image-gallery/styles/css/image-gallery.css";
 
 // Component for gallery
 export default class Gallery extends Component{
@@ -22,7 +23,6 @@ export default class Gallery extends Component{
   }
 
   render() {
-    console.log(this.items)
     this.renderImages();
     return (
       <div className="PhotosTile">
@@ -32,7 +32,8 @@ export default class Gallery extends Component{
           <ImageGallery
             items={this.items}
             showIndex={true}
-            showBullets={true} />
+            showBullets={true}
+            showThumbnails={false} />
         </div>
       </div>
     )
