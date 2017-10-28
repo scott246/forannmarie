@@ -22,7 +22,6 @@ class MainTile extends Component {
 	}
 
 	render() {
-		console.log(this.state)
 		if (this.state.displayedMessage === null) {
 			return (
 				<div className="Tile">

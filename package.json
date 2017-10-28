@@ -32,10 +32,11 @@
     "npm": "^4.2.0"
   },
   "scripts": {
-    "start": "concurrently \"react-scripts start\" \"PORT=3001 node react-backend/bin/www\"",
+    "start": "concurrently \"react-scripts start\" \"node react-backend/bin/www\"",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "npm run build"
   },
   "proxy": "http://localhost:3001"
 }
