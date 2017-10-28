@@ -1,0 +1,38 @@
+{
+  "name": "forannmarie",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "concurrently": "^3.5.0",
+    "dns": "^0.2.2",
+    "express": "^4.16.2",
+    "express-generator": "^4.15.5",
+    "moment": "^2.19.1",
+    "pg": "7.3.0",
+    "pg-hstore": "^2.3.2",
+    "pg-native": "^2.2.0",
+    "pg-promise": "^7.0.3",
+    "react": "^15.6.1",
+    "react-big-calendar": "^0.16.1",
+    "react-controllables": "0.6.0",
+    "react-dnd": "2.5.4",
+    "react-dnd-html5-backend": "2.5.4",
+    "react-dom": "^15.6.1",
+    "react-google-maps": "^9.0.1",
+    "react-image-gallery": "^0.8.3",
+    "react-pure-render": "1.0.2",
+    "react-scripts": "1.0.13"
+  },
+  "engines": {
+    "node": "^7.8.0",
+    "npm": "^4.2.0"
+  },
+  "scripts": {
+    "start": "concurrently \"react-scripts start\" \"node react-backend/bin/www\"",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "npm run build"
+  },
+  "proxy": "http://localhost:3001"
+}
