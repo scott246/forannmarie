@@ -28,6 +28,7 @@ client.query('SELECT * FROM Messages;', (err, res) => {
 /* GET messages listing. */
 app.get('/messages', function(req, res) {
   //res.send('respond with a resource');
+  res.set('Content-Type', 'application/json');
   res.send(JSON.stringify(response));
 });
 
@@ -37,11 +38,8 @@ app.get('/messages', function(req, res) {
 //   res.send('{"message":"Hello from the custom server!"}');
 // });
 
-// All remaining requests return the React app, so it can handle routing.
-app.get('*', function(request, response) {
-  response.sendFile(path.resolve(__dirname, '../react-ui/build', 'index.html'));
-});
-
 app.listen(PORT, function () {
   console.log(`Listening on port ${PORT}`);
 });
+
+module.exports = app;

@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "A wonderful website for a wonderful girl <3",
   "engines": {
-    "node": "latest"
+    "node": "latest",
+    "npm": "latest"
   },
   "scripts": {
     "start": "node server",
