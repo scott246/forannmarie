@@ -15,12 +15,12 @@ const client = new Client({
 
 client.connect();
 
-var response = [];
+var messageResponse = [];
 
 client.query('SELECT * FROM Messages;', (err, res) => {
   if (err) throw err;
   for (let row of res.rows) {
-    response.push(row);
+    messageResponse.push(row);
   }
   client.end();
 });
@@ -29,7 +29,7 @@ client.query('SELECT * FROM Messages;', (err, res) => {
 app.get('/messages', function(req, res) {
   //res.send('respond with a resource');
   res.set('Content-Type', 'application/json');
-  res.send(JSON.stringify(response));
+  res.send(JSON.stringify(messageResponse));
 });
 
 // // Answer message requests.
