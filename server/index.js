@@ -10,7 +10,7 @@ app.use(express.static(path.resolve(__dirname, '../react-ui/build')));
 const { Client } = require('pg');
 
 const client = new Client({
-  connectionString: process.env.DATABASE_URL, //"postgres://localhost:5432/local-db"
+  connectionString: "postgres://jlzshsrrcyraju:e0dbae095eab086eeac1e657d242fca3560ad5ff1963dc12084f0f2f7147297b@ec2-107-22-173-160.compute-1.amazonaws.com:5432/d9jrd8gsqm329o?ssl=true"
 });
 
 client.connect();
