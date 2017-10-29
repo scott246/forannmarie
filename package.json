@@ -6,7 +6,7 @@
     "node": "latest"
   },
   "scripts": {
-    "start": "concurrently \"node server\" \"cd react-ui/ && npm install && npm install --only=dev --no-shrinkwrap && npm run build\"",
+    "start": "node server",
     "heroku-postbuild": "cd react-ui/ && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
   },
   "cacheDirectories": [
