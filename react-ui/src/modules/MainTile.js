@@ -15,10 +15,21 @@ class MainTile extends Component {
 
 	getMessages = () => {
 		fetch('/messages')
-			.then(res => res.json())
-			.then(fetchedMessages => this.setState({
-				displayedMessage: JSON.parse(fetchedMessages)[Math.floor(Math.random() * JSON.parse(fetchedMessages).length)]
-			}))
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`status ${response.status}`);
+        }
+        return response.json();
+      })
+      .then(fetchedMessages => {
+        this.setState({
+          displayedMessage: fetchedMessages[Math.floor(Math.random() * fetchedMessages.length)]
+        });
+      }).catch(e => {
+        this.setState({
+          displayedMessage: `API call failed: ${e}`
+        });
+      })
 	}
 
 	render() {
@@ -29,7 +40,7 @@ class MainTile extends Component {
 						<div className="Title">
 							<h1>For Ann Marie Schoenbaum</h1>
 							<hr width="50%"/>
-							<div>Loading message...</div>
+							<p>Loading message...</p>
 						</div>
 					</div>
 				</div>

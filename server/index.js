@@ -21,7 +21,6 @@ client.query('SELECT * FROM Messages;', (err, res) => {
   if (err) throw err;
   for (let row of res.rows) {
     response.push(row);
-    console.log(JSON.stringify(row));
   }
   client.end();
 });
@@ -29,7 +28,7 @@ client.query('SELECT * FROM Messages;', (err, res) => {
 /* GET messages listing. */
 app.get('/messages', function(req, res) {
   //res.send('respond with a resource');
-  res.send(res.json(JSON.stringify(response)));
+  res.send(JSON.stringify(response));
 });
 
 // // Answer message requests.
