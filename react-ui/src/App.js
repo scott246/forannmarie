@@ -1,54 +1,62 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+
+/* imports for each Component */
+import MainTile from './modules/MainTile.js';
+import Countdown from './modules/Countdown.js';
+import Letters from './modules/Letters.js';
+import BucketList from './modules/Bucketlist.js';
+import Photos from './modules/PhotoGallery.js';
+import Distance from './modules/Distance.js';
+import Calendar from './modules/Calendar.js';
+
 import './App.css';
+import appjson from './apps.json';
+
+class Navbar extends Component {
+  render() {
+    return (
+      <div className="Dropdown">
+        <button className="Dropbtn"> All Apps </button>
+        <div className="Dropdown-content">
+        {
+          appjson.apps.map((item) => {
+            return <Row key={item.name} label={item.name} href={item.href} />
+          })
+        }
+        </div>
+      </div>
+    )
+  }
+}
+
+class Row extends Component {
+  render() {
+    return (
+      <a href={this.props.href}>{this.props.label}</a>
+    )
+  }
+}
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      message: null,
-      fetching: true
-    };
-  }
-
-  componentDidMount() {
-    fetch('/api')
-      .then(response => {
-        if (!response.ok) {
-          throw new Error(`status ${response.status}`);
-        }
-        return response.json();
-      })
-      .then(json => {
-        this.setState({
-          message: json.message,
-          fetching: false
-        });
-      }).catch(e => {
-        this.setState({
-          message: `API call failed: ${e}`,
-          fetching: false
-        });
-      })
-  }
-
   render() {
     return (
       <div className="App">
         <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+          <div className="Name">
+            <h3>Annie{'\''}s List</h3>
+          </div>
+          <Navbar />
         </div>
+        {/*add components to app*/}
+        <MainTile />
+        <Countdown />
+        <Letters />
+        <BucketList />
+        <Photos />
+        <Distance />
+        <Calendar />
         <p className="App-intro">
-          {'This is '}
-          <a href="https://github.com/mars/heroku-cra-node">
-            {'create-react-app with a custom Node/Express server'}
-          </a><br/>
-        </p>
-        <p className="App-intro">
-          {this.state.fetching
-            ? 'Fetching message from API'
-            : this.state.message}
+          "Made with {'<'}3 by Nathan Scott, 2017."
         </p>
       </div>
     );

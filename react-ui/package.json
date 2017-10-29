@@ -1,13 +1,30 @@
 {
-  "name": "react-ui",
+  "name": "forannmarie",
   "version": "0.1.0",
   "private": true,
-  "devDependencies": {
-    "react-scripts": "0.9.5"
-  },
   "dependencies": {
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "concurrently": "^3.5.0",
+    "dns": "^0.2.2",
+    "express": "^4.16.2",
+    "moment": "^2.19.1",
+    "pg": "7.3.0",
+    "pg-hstore": "^2.3.2",
+    "pg-native": "^2.2.0",
+    "pg-promise": "^7.0.3",
+    "react": "^15.6.1",
+    "react-big-calendar": "^0.16.1",
+    "react-controllables": "0.6.0",
+    "react-dnd": "2.5.4",
+    "react-dnd-html5-backend": "2.5.4",
+    "react-dom": "^15.6.1",
+    "react-google-maps": "^9.0.1",
+    "react-image-gallery": "^0.8.3",
+    "react-pure-render": "1.0.2",
+    "react-scripts": "1.0.13"
+  },
+  "engines": {
+    "node": "^7.8.0",
+    "npm": "^4.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -15,5 +32,5 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "proxy": "http://localhost:5000"
+  "proxy": "http://localhost:3001"
 }
