@@ -47,23 +47,27 @@ export default class Map extends React.Component {
         });
       }).catch(e => {
         this.setState({
-          locations: `API call failed: ${e}`
+          locations: `API call failed (distance.js): ${e}`
         });
       })
   }
 
   mapMarkers = () => {
     for (var i = 0; i < this.state.locations.length; i++) {
+      console.log(this.state.locations[i].latitude);
+      var latitude = parseFloat(this.state.locations[i].latitude);
+      var longitude = parseFloat(this.state.locations[i].longitude);
+      var pos = {lat: latitude, lng: longitude}
       markers.push(<Marker
-        position={{lat: this.state.locations[i].latitude, lng: this.state.locations[i].longitude}}
+        position={pos}
         title={this.state.locations[i].title}
-        icon={"http://www.googlemapsmarkers.com/v1/"+{this.state.locations[i].traveler}+"/"+{this.state.locations[i].color}}
+        icon={this.state.locations[i].icon}
       />)
     }
   }
 
   render() {
-    mapMarkers();
+    this.mapMarkers();
     return (
       <div className="DistanceTile">
         <div className="TileTitle">Travel Plans</div>

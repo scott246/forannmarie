@@ -17,7 +17,7 @@ INSERT INTO messages VALUES ('I want to go on all the adventures with you by my 
 INSERT INTO messages VALUES ('I can''t wait until we can spend our lives together as husband and wife.');
 INSERT INTO messages VALUES ('Every time I think of you, I feel better.');
 INSERT INTO messages VALUES ('You''re perfect just the way you are.');
-INSERT INTO messages VALUES ('<3');
+INSERT INTO messages VALUES ('&lt;3');
 INSERT INTO messages VALUES ('You are the Spock to my Kirk.');
 INSERT INTO messages VALUES ('I want to spend a lazy Sunday with you watching it storm outside and reading.');
 INSERT INTO messages VALUES ('I want nothing more than to grow old with you.');

@@ -1,7 +1,7 @@
 {
   "name": "for-annmarie",
   "version": "1.0.0",
-  "description": "A wonderful website for a wonderful girl <3",
+  "description": "A wonderful website for a wonderful girl",
   "engines": {
     "node": "latest",
     "npm": "latest"

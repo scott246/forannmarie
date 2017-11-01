@@ -27,7 +27,7 @@ class MainTile extends Component {
         });
       }).catch(e => {
         this.setState({
-          displayedMessage: `API call failed: ${e}`
+          displayedMessage: `API call failed (maintile.js): ${e}`
         });
       })
 	}
