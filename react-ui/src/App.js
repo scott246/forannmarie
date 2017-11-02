@@ -8,6 +8,7 @@ import BucketList from './modules/Bucketlist.js';
 import Photos from './modules/PhotoGallery.js';
 import Distance from './modules/Distance.js';
 import Calendar from './modules/Calendar.js';
+import Games from './modules/Games.js';
 
 import './App.css';
 import appjson from './apps.json';
@@ -42,10 +43,8 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App-header">
-          <div className="Name">
-            <h3>Annie{'\''}s List</h3>
-          </div>
-          <Navbar />
+          <h3 className="Name">Annie{'\''}s List</h3>
+          {/* <Navbar /> */}
         </div>
         {/*add components to app*/}
         <MainTile />
@@ -54,7 +53,8 @@ class App extends Component {
         <BucketList />
         <Photos />
         <Distance />
-        <Calendar />
+        {/* <Calendar /> */}
+        <Games />
         <p className="App-intro">
           "Made with {'<'}3 by Nathan Scott, 2017."
         </p>

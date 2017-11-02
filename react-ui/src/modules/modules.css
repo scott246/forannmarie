@@ -101,6 +101,19 @@
   height: 400px;
 }
 
+.GamesTile {
+  height: var(--xlarge);
+  width: var(--regular);
+  padding-right: var(--spacing);
+  padding-top: var(--spacing);
+  padding-left: var(--spacing);
+  margin-right: var(--spacing);
+  margin-top: var(--spacing);
+  background-color: rgba(255,255,255,.5);
+  font-family: 'Arial', sans-serif;
+  float: right;
+}
+
 .TileTitle {
   font-family: 'Georgia',serif;
   font-size: large;

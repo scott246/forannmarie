@@ -54,7 +54,6 @@ export default class Map extends React.Component {
 
   mapMarkers = () => {
     for (var i = 0; i < this.state.locations.length; i++) {
-      console.log(this.state.locations[i].latitude);
       var latitude = parseFloat(this.state.locations[i].latitude);
       var longitude = parseFloat(this.state.locations[i].longitude);
       var pos = {lat: latitude, lng: longitude}

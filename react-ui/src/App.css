@@ -12,7 +12,7 @@ body {
   height: 60px;
   color: white;
   text-align: left;
-  font-family: 'Georgia', serif;
+  font-family: 'Brush Script MT', cursive;
 }
 
 .Tile {
@@ -73,6 +73,12 @@ body {
 }
 
 .MainTile {
+  background-image: url('cherryblossoms.jpg');
+  height:200px;
+  width: 100%;
+}
+
+.EndTile {
   background-image: url('cherryblossoms.jpg');
   height:200px;
   width: 100%;
