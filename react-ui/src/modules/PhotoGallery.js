@@ -34,7 +34,7 @@ export default class Gallery extends Component{
             showIndex={true}
             showBullets={true}
             showThumbnails={false}
-            height={100}/>
+            />
         </div>
       </div>
     )
