@@ -1,12 +1,15 @@
 :root {
+  --minispacing: .75%;
   --spacing: 10px;
+  --miniheight: 200px;
+  --miniwidth: 46%;
   --small: 100px;
   --medium: 220px;
   --large: 340px;
   --xlarge: 460px;
   --xxlarge: 940px;
-  --regular: 47.2%;
-  --wide: 97%;
+  --regular: calc(50% - 35px);
+  --wide: calc(100% - 35px);
 }
 
 .CountdownTile {
@@ -112,6 +115,31 @@
   background-color: rgba(255,255,255,.5);
   font-family: 'Arial', sans-serif;
   float: right;
+}
+
+.MiniTileLeft {
+  height: var(--miniheight);
+  width: var(--miniwidth);
+  padding-right: var(--minispacing);
+  padding-left: var(--minispacing);
+  padding-top: var(--minispacing);
+  margin-right: var(--minispacing);
+  margin-left: var(--minispacing);
+  margin-top: var(--minispacing);
+  background-color: rgba(255,255,255,.75);
+  float:left;
+}
+.MiniTileRight {
+  height: var(--miniheight);
+  width: var(--miniwidth);
+  padding-right: var(--minispacing);
+  padding-left: var(--minispacing);
+  padding-top: var(--minispacing);
+  margin-right: var(--minispacing);
+  margin-left: var(--minispacing);
+  margin-top: var(--minispacing);
+  background-color: rgba(255,255,255,.75);
+  float:right;
 }
 
 .TileTitle {

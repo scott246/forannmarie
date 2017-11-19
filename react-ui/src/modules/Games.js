@@ -8,7 +8,12 @@ class Games extends Component {
         <div className="TileTitle">Games</div>
         <hr />
         <div>
-          <p>Coming soon! :)</p>
+          <div className="MiniTileLeft">
+            <a href="#">Connect 4</a>
+          </div>
+          <div className="MiniTileRight">
+            <a href="#">Checkers</a>
+          </div>
         </div>
       </div>
 		)

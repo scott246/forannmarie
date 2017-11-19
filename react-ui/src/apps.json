@@ -55,6 +55,10 @@
     {
       "name":"Quizzes",
       "href":"modules/Quizzes.js"
+    },
+    {
+      "name":"Blog",
+      "href":"modules/Blog.js"
     }
   ]
 }

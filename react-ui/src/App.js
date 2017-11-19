@@ -53,8 +53,8 @@ class App extends Component {
         <BucketList />
         <Photos />
         <Distance />
-        {/* <Calendar /> */}
-        <Games />
+        {/* <Games /> */}
+        <Calendar />
         <p className="App-intro">
           "Made with {'<'}3 by Nathan Scott, 2017."
         </p>
