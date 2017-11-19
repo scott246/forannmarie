@@ -15,8 +15,9 @@ const client = new Client({
 
 var messageResponse = [];
 var mapResponse = [];
+var calResponse = [];
 
-dbCalls = 2;
+dbCalls = 3;
 
 function endHandler() {
   if (dbCalls === 0) {
@@ -41,6 +42,14 @@ client.query('SELECT * FROM Map;', (err, res) => {
   dbCalls--;
   endHandler();
 });
+client.query('SELECT * FROM Calendar;', (err, res) => {
+  if (err) throw err;
+  for (let row of res.rows) {
+    calResponse.push(row);
+  }
+  dbCalls--;
+  endHandler();
+});
 
 /* GET messages listing. */
 app.get('/messages', function(req, res) {
@@ -53,6 +62,12 @@ app.get('/locations', function(req, res) {
   //res.send('respond with a resource');
   res.set('Content-Type', 'application/json');
   res.send(JSON.stringify(mapResponse));
+});
+/* GET events listing. */
+app.get('/events', function(req, res) {
+  //res.send('respond with a resource');
+  res.set('Content-Type', 'application/json');
+  res.send(JSON.stringify(calResponse));
 });
 
 app.listen(PORT, function () {

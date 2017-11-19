@@ -14,7 +14,7 @@ const DragAndDropCalendar = withDragAndDrop(BigCalendar);
 // to the correct localizer.
 BigCalendar.momentLocalizer(moment); // or globalizeLocalizer
 
-var events = [
+var foo = [
   {
     'title': 'All Day Event',
     'allDay': true,
@@ -95,14 +95,54 @@ var events = [
   }
 ]
 
+var allEvents = []
+
 class DNDCalendar extends React.Component{
   constructor (props) {
     super(props)
     this.state = {
-      events: events
+      events: []
     }
 
     this.moveEvent = this.moveEvent.bind(this)
+  }
+
+  componentWillMount = () => {
+		this.getEvents();
+	}
+
+  getEvents = () => {
+  	fetch('/events')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`status ${response.status}`);
+        }
+        return response.json();
+      })
+      .then(fetchedEvents => {
+        console.log(fetchedEvents.length)
+        for (var i = 0; i < fetchedEvents.length; i++){
+          allEvents.push(
+            {
+              'title': fetchedEvents[i].title,
+              'allDay': fetchedEvents[i].allday,
+              'start': Date.parse(fetchedEvents[i].starttime),
+              'end': Date.parse(fetchedEvents[i].endtime),
+              'desc': fetchedEvents[i].description
+            }
+          )
+        }
+        this.setState({
+          events: allEvents
+        });
+        console.log(fetchedEvents)
+        console.log(allEvents)
+      }).catch(e => {
+        this.setState({
+          locations: `API call failed (calendar.js): ${e}`
+        });
+      })
+
   }
 
   moveEvent({ event, start, end }) {
